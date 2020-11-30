@@ -1,19 +1,21 @@
-The simplest Bitcoin Core RPC library for when you just want to talk to Bitcoin Core.
+Forked from fiatjaf/bitcoin-requests; modified for Litecoin Core
+
+The simplest Litecoin Core RPC library for when you just want to talk to Litecoin Core.
 
 ## Usage
 
-If you started Bitcoin Core like this:
+If you started Litecoin Core like this:
 
 ```bash
-bitcoind -regtest -rpcuser=user -rpcpassword=pass
+litcoind -regtest -rpcuser=user -rpcpassword=pass
 ```
 
-Instantiate the `bitcoin_requests` RPC client like this:
+Instantiate the `litcoin_requests` RPC client like this:
 
 ```python
-from bitcoin_requests import BitcoinRPC
+from litcoin_requests import LitcoinRPC
 
-rpc = BitcoinRPC('http://127.0.0.1:18443', 'user', 'pass')
+rpc = LitecoinRPC('http://127.0.0.1:9332, 'user', 'pass')
 blocks = rpc.generate(101)
 tx = rpc.sendtoaddress(address, 20)
 ```
@@ -21,5 +23,5 @@ tx = rpc.sendtoaddress(address, 20)
 ## Installation
 
 ```
-pip install bitcoin-requests
+pip install litcoin-requests
 ```
