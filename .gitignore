@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*.swo
+*.swp
+__pycache__
+*.egg-info
+build
+dist
+*.pyre
